@@ -5,9 +5,19 @@ import java.awt.event.*;
 public class Main {
     public static void main(String[] args) {
         JFrame myFrame = new JFrame();
-        myFrame.setSize(700, 500);
+        myFrame.setSize(2500, 1600);
 
 
+
+        JLayeredPane tab = new JLayeredPane();
+        tab.setSize(1440,900);
+
+        myFrame.add(tab);
+
+        ImageIcon icon = new ImageIcon("table.png");
+        icon.setImage(icon.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT));
+        JLabel table = new JLabel(icon);
+        JLayeredPane.add(table,Integer.valueOf(0));
 
 
         ImageIcon stuff = new ImageIcon("2C.png");
@@ -21,18 +31,12 @@ public class Main {
 
 
 
-        RoPanel yourPanel = new RoPanel();
-        yourPanel.setSize(700, 500);
 
-        yourPanel.add(card);
 
         // myFrame.add(myPanel);
-        myFrame.add(yourPanel);
+        myFrame.add(tab);
         myFrame.setVisible(true);
 
-        // myFrame.add(myPanel);
-        myFrame.add(yourPanel);
-        myFrame.setVisible(true);
 
     }
 }
