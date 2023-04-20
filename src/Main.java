@@ -4,26 +4,30 @@ import java.awt.event.*;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame myFrame = new JFrame();
-        myFrame.setSize(2500, 1600);
 
 
 
         JLayeredPane tab = new JLayeredPane();
         tab.setSize(1440,900);
 
-        myFrame.add(tab);
 
-        ImageIcon icon = new ImageIcon("table.png");
-        icon.setImage(icon.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT));
+
+        ImageIcon icon = new ImageIcon("tabless.png");
+        icon.setImage(icon.getImage().getScaledInstance(1440,900,Image.SCALE_DEFAULT));
         JLabel table = new JLabel(icon);
-        JLayeredPane.add(table,Integer.valueOf(0));
+        tab.add(table,Integer.valueOf(0));
+        table.setBounds(0,0,1440,900);
 
 
-        ImageIcon stuff = new ImageIcon("2C.png");
-        stuff.setImage(stuff.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT));
 
-        JLabel card = new JLabel(stuff);
+
+        JFrame myFrame = new JFrame();
+
+        myFrame.add(tab);
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myFrame.setSize(2500, 1600);
+        myFrame.setLayout(null);
+        myFrame.setVisible(true);
 
         System.out.println("I am on REplit)");
 
@@ -33,9 +37,7 @@ public class Main {
 
 
 
-        // myFrame.add(myPanel);
-        myFrame.add(tab);
-        myFrame.setVisible(true);
+
 
 
     }
