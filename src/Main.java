@@ -5,7 +5,7 @@ import java.awt.event.*;
 public class Main {
     public static void main(String[] args) {
 
-
+        Wheel bob = new Wheel();
 
         JLayeredPane tab = new JLayeredPane();
         tab.setSize(1440,900);
@@ -21,11 +21,9 @@ public class Main {
         tab.add(table,Integer.valueOf(1));
         table.setBounds(0,0,1440,900);
 
-        ImageIcon ico = new ImageIcon("wheel.png");
-        ico.setImage(ico.getImage().getScaledInstance(400 ,400,Image.SCALE_DEFAULT));
-        JLabel wheel = new JLabel(ico);
-        whe.add(wheel,Integer.valueOf(2));
-        wheel.setBounds(97,330,400,400);
+
+        whe.add(bob,Integer.valueOf(2));
+        bob.setBounds(97,330,400,400);
 
 
 
