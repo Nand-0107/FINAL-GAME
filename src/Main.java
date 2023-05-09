@@ -1,8 +1,5 @@
-import com.sun.jdi.IntegerValue;
-
 import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,10 +8,11 @@ public class Main {
         icon.setImage(icon.getImage().getScaledInstance(1440,900,Image.SCALE_DEFAULT));
         JLabel table = new JLabel(icon);
 
-    JPanel casino = new Panel();
-    casino.drawImage(, 0, 0, null);
-
+        Panel casino = new Panel();
         JFrame myFrame = new JFrame();
+
+
+
 
         myFrame.add(casino);
 

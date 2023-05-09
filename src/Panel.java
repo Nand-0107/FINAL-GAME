@@ -1,14 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel extends JPanel {
-    private Wheel wh = new Wheel();
+public class Panel extends JPanel{
 
 
+    ImageIcon icon = new ImageIcon("tabless.png");
+
+    @Override
     protected void paintComponent(Graphics g) {
-        wh.paint(g);
+        super.paintComponent(g);
 
-        g.drawImage();
+        g.drawImage(icon.getImage(), 0,0,null);
     }
 
     }
