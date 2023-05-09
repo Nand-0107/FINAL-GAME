@@ -1,20 +1,22 @@
-import java.awt.*;
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-
-        ImageIcon icon = new ImageIcon("tabless.png");
-        icon.setImage(icon.getImage().getScaledInstance(1440,900,Image.SCALE_DEFAULT));
-        JLabel table = new JLabel(icon);
-
-        Panel casino = new Panel();
-        JFrame myFrame = new JFrame();
+    public static void main(String[] args) throws IOException {
 
 
+        BufferedImage image = ImageIO.read(new File("tabless.png"));
 
+       ImagePanel panel = new ImagePanel(image);
 
-        myFrame.add(casino);
+        JFrame frame = new JFrame();
+        frame.getContentPane().add(panel);
+        frame.pack();
+        frame.setVisible(true);
+
 
 //        JLayeredPane tab = new JLayeredPane();
 //        tab.setSize(1440,900);
@@ -43,17 +45,14 @@ public class Main {
 //
 //
 //
-//
-//
 //        myFrame.add(whe);
 //        myFrame.add(tab);
-
-
-
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        myFrame.setSize(2500, 1600);
-        myFrame.setLayout(null);
-        myFrame.setVisible(true);
+//
+//
+//        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        myFrame.setSize(2500, 1600);
+//        myFrame.setLayout(null);
+//        myFrame.setVisible(true);
 
         System.out.println("I am on REplit)");
 
