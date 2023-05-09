@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 
 public class Panel {
@@ -8,4 +9,6 @@ public class Panel {
         wh.paint(g);
     }
 
+    public void add(JLayeredPane whe) {
+    }
 }

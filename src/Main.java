@@ -29,18 +29,21 @@ public class Main {
 //        whe.add(wheel,Integer.valueOf(2));
 //        wheel.setBounds(97,330,400,400);
 
-        Panel wheelsss =  new Panel();
-        whe.add(wheelsss,3);
+        JPanel wheelsss =  new JPanel();
 
 
 
 
 
 
+        wheelsss.add(whe);
+        wheelsss.add(tab);
+
+        wheelsss.setVisible(true);
 
 
-        myFrame.add();
-        myFrame.add(tab);
+        myFrame.add(wheelsss);
+
 
 
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
