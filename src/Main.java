@@ -1,3 +1,5 @@
+import com.sun.jdi.IntegerValue;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -5,35 +7,49 @@ import java.awt.event.*;
 public class Main {
     public static void main(String[] args) {
 
-        Wheel bob = new Wheel();
-
-        JLayeredPane tab = new JLayeredPane();
-        tab.setSize(1440,900);
-
-        JLayeredPane whe = new JLayeredPane();
-        whe.setSize(1440,900);
-
-        JFrame myFrame = new JFrame();
-
         ImageIcon icon = new ImageIcon("tabless.png");
         icon.setImage(icon.getImage().getScaledInstance(1440,900,Image.SCALE_DEFAULT));
         JLabel table = new JLabel(icon);
-        tab.add(table,Integer.valueOf(1));
-        table.setBounds(0,0,1440,900);
 
+    JPanel casino = new Panel();
+    casino.drawImage(, 0, 0, null);
 
-        whe.add(bob,Integer.valueOf(2));
-        bob.setBounds(97,330,400,400);
+        JFrame myFrame = new JFrame();
 
+        myFrame.add(casino);
 
+//        JLayeredPane tab = new JLayeredPane();
+//        tab.setSize(1440,900);
+//
+//        JLayeredPane whe = new JLayeredPane();
+//        whe.setSize(1440,900);
+//
+//        JFrame myFrame = new JFrame();
+//
+//        ImageIcon icon = new ImageIcon("tabless.png");
+//        icon.setImage(icon.getImage().getScaledInstance(1440,900,Image.SCALE_DEFAULT));
+//        JLabel table = new JLabel(icon);
+//        tab.add(table,Integer.valueOf(1));
+//        table.setBounds(0,0,1440,900);
+//
+//        ImageIcon ico = new ImageIcon("wheel.png");
+//        ico.setImage(ico.getImage().getScaledInstance(400 ,400,Image.SCALE_DEFAULT));
+//        JLabel wheel = new JLabel(ico);
+//        whe.add(wheel,Integer.valueOf(2));
+//        wheel.setBounds(97,330,400,400);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//        myFrame.add(whe);
+//        myFrame.add(tab);
 
-
-
-
-
-
-        myFrame.add(whe);
-        myFrame.add(tab);
 
 
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
