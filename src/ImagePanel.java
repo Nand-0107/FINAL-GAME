@@ -10,6 +10,9 @@ public class ImagePanel extends JPanel {
     private BufferedImage wheel;
     private int width;
     private int height;
+    private Graphics2D wheelss;
+    private final int x = 44;
+    private final int y = 120;
 
     private int angle = 0;
 
@@ -24,6 +27,8 @@ public class ImagePanel extends JPanel {
         setMaximumSize(size);
         setSize(size);
         setLayout(null);
+
+
 
         JButton butt = new JButton("SPINY SPIN");
 
@@ -48,21 +53,21 @@ public class ImagePanel extends JPanel {
         super.paintComponent(g);
         g.drawImage(image, 0, 0, null);
 
-
-        Graphics2D wheelss = (Graphics2D) g.create();
+        wheelss = (Graphics2D) g.create();
         wheelss.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 
-        int x = (getWidth() - wheel.getWidth()) / 2;
-        int y = (getHeight() - wheel.getHeight()-2) / 2;
 
 
-        AffineTransform at = new AffineTransform();
-        at.setToRotation(Math.toRadians(angle), x + (image.getWidth() / 2), y + (image.getHeight() / 2));
 
-        wheelss.setTransform(at);
-        wheelss.drawImage(wheel, 72,225 ,400,400, this);
+//        int x = (getWidth() - wheel.getWidth()) / 2;
+//        int y = (getHeight() - wheel.getHeight()-2) / 2;
+        //wheelss.translate(wheel.getWidth()/2, wheel.getHeight()/2);
+        wheelss.rotate(Math.toRadians(angle), wheel.getWidth()/2, wheel.getHeight()/2);
+        wheelss.drawImage(wheel, x,y ,200,200, this);
+        //wheelss.translate(x - wheel.getWidth()/2, y - wheel.getHeight()/2);
         wheelss.dispose();
+
 
 
     }
