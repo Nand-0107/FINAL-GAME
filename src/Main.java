@@ -9,8 +9,10 @@ public class Main {
 
 
         BufferedImage image = ImageIO.read(new File("tabless.png"));
+        BufferedImage whe = ImageIO.read(new File("wheel.png"));
 
-       ImagePanel panel = new ImagePanel(image);
+
+       ImagePanel panel = new ImagePanel(image,whe);
 
         JFrame frame = new JFrame();
         frame.getContentPane().add(panel);
@@ -53,8 +55,10 @@ public class Main {
 //        myFrame.setSize(2500, 1600);
 //        myFrame.setLayout(null);
 //        myFrame.setVisible(true);
-
+        int x = whe.getHeight();
+        int y = whe.getWidth();
         System.out.println("I am on REplit)");
+        System.out.println(y);
 
 
 
